@@ -1,0 +1,198 @@
+@font-face {
+	font-family: 'LatoLigIta';
+	src: url('Lato/Lato-LigIta.ttf');
+}
+@font-face {
+	font-family: 'LatoBol';
+	src: url('Lato/Lato-Bol.ttf');
+}
+@font-face {
+	font-family: 'Lato';
+	src: url('Lato/Lato-Lig.ttf');
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Basic elements */
+body {
+	background-color: #1d1d1d;
+	font-family: 'LatoLigIta';
+	color:white;
+}
+/* Navigation */
+#q {
+	position:fixed;
+	margin-top:-33px;
+	margin-left:90px;
+}
+#logo {
+	width:60px;
+	height:auto;
+	margin-left:10px;
+}
+#navbar {
+	position:fixed;
+	top:0;
+	background: rgba(0,0,0,.9);
+	padding-top:10px;
+	padding-bottom: 10px;
+	width:100%;
+	margin:0;
+}
+#stuffInNavbar {
+	padding-right:5%;
+	padding-left:5%;
+	margin-left:0 auto;
+	margin-right:0 auto;
+}
+#navbar h2{
+	text-align:right;
+	float:right;
+	color:#ff7700;
+	margin-top:5px;
+}
+#q {
+	background:none;
+	color:grey;
+	font-size:23px;
+	border:none;
+	font-family:'Lato';
+	font-weight: 100;
+}
+#q:focus {
+	outline: none;
+	padding-bottom:12px;
+	border-bottom: 3px solid #ff7700;
+}
+footer {
+	bottom:0;
+	position: fixed;
+}
+/* Songs list */
+#tracks_list span, #tracks_list h4 {
+	margin-top:4px;
+	color:white;
+	font-family: 'Lato';
+	font-weight: 100;
+}
+#tracks_list span {
+	color:gray;
+}
+#tracks_list span b {
+	font-weight: 800;
+}
+#tracks_list h4 {
+	letter-spacing: 2px;
+}
+#tracks_list h2{
+	font-family: 'Lato';
+	font-weight: 100;
+	color:white;
+	font-size:32px;
+	text-decoration: none;
+}
+#tracks_list a {
+	text-decoration: none;
+}
+#tracks_list li:hover {
+	background: rgba(0,0,0,.2);
+}
+
+#tracks_list li {
+	padding-bottom:18px;
+	padding-top:18px;
+	padding-right:5%;
+	padding-left:5%;
+	list-style: none;
+	transition:.3s;
+}
+#tracks_list li:hover {
+	padding-left:6%;
+} 
+.plays {
+	font-style: italic;
+}
+#sounds {
+	margin-top:50px;
+}
+.playedSong li {
+	background:black;
+}
+.playedSong li h2, .playedSong li span{
+	color:#ff7700 !important;
+}
+@media screen and (max-width: 900px) {
+	#tracks_list h2 {
+		font-size:26px;
+	}
+	#navbar h2 {
+		display:none;
+	}
+}
+@media screen and (max-width: 500px) {
+	#tracks_list h2 {
+		font-size:23px;
+	}
+	#tracks_list li, #stuffInNavbar {
+		padding-left:5px;
+		padding-right:5px;
+	}
+	#tracks_list li:hover {
+	padding-left:5px;
+	padding-right:5px;
+	} 
+	#q {
+		font-size:20px;
+	}
+	#q:focus{
+		padding-top:3px;
+		padding-bottom:12px !important;
+	}
+}

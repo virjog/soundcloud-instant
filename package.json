@@ -1,0 +1,22 @@
+{
+  "name": "soundcloudinstant",
+  "version": "0.0.0",
+  "description": "instantly play soundcloud tracks",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "soundcloud",
+    "instant"
+  ],
+  "author": "viral",
+  "license": "ISC",
+  "dependencies": {
+    "logfmt": "^0.23.0",
+    "express": "^3.4.8"
+  },
+   "engines": {
+    "node": "0.10.x"
+  }
+}
