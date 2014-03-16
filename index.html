@@ -2,9 +2,9 @@
 <html>
   <head>
     <title>SoundCloud Instant</title>
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap.css">
     <!--<link rel="stylesheet" href="style.css">-->
-    <link rel="icon" href="img/sg-fav.ico" type="image/x-icon">
+    <link rel="icon" href="sg-fav.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=0;" />
   <!---<link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114-precomposed.png">
@@ -13,6 +13,14 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />-->
   </head>
   <body>
+  <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=418183624970445";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 
     <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
@@ -33,7 +41,7 @@
               <a href="../contact">Contact</a>
             </li>
           </ul>
-          
+
           <form class="navbar-form navbar-left" id="search" action="javascript:void(0);">
                     <input type="text" class="form-control col-lg-8" id="q" name="q" autofocus="true"placeholder="Search SoundCloud">
                     <input type="hidden" name="client_id" value="2010872379d388118fe90f01ace38d03">
@@ -41,18 +49,18 @@
           </form>
 
           <ul class="nav navbar-nav navbar-right">
-          <a href="https://twitter.com/share" class="twitter-share-button" data-via="twitterapi" data-lang="en">Tweet</a>
-            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-
-            <div class="custom-tweet-button">
-              <a href="https://twitter.com/#!/addcss/" target="_blank" alt ="Tweet this post">
-                <i class="btn-icon"></i>
-                <span class="btn-text">Tweet</span>
-              </a>
-            </div>
-
             <li><a href="https://twitter.com/virjog" target="_blank">Made by Viral Jogani</a></li>
-            <li><a href="http://builtwithbootstrap.com/" target="_blank">Built With Bootstrap</a></li>
+           <!--<li>
+               <div class="custom-tweet-button">
+                  <a href="https://twitter.com/share" target="_blank" alt ="Tweet this post">
+                    <i class="btn-icon"></i>
+                    <span class="btn-text">Tweet</span>
+                  </a>
+                </div>
+            </li>
+            <li>
+                <div class="fb-share-button" data-href="http://soundcloud-instant.herokuapp.com/" data-type="button_count"></div>
+            </li>-->
           </ul>
 
         </div>
@@ -74,6 +82,6 @@
             <div id="sounds"></div>
         </div>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="scripts/script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
