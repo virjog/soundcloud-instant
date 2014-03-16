@@ -1,41 +1,69 @@
 <!doctype html>
 <html>
   <head>
-    <title>SoundCloud Instant - Viral Jogani</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="img/sg-fav.ico" type="img/sg-fav.ico">
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,300italic' rel='stylesheet' type='text/css'>
+    <title>SoundCloud Instant</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <!--<link rel="stylesheet" href="style.css">-->
+    <link rel="icon" href="sg-fav.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=0;" />
-
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144-precomposed.png">
+  <!---<link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-57-precomposed.png">
-
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />-->
   </head>
-
   <body>
-    <script type="text/javascript"></script>
-    <div id="navbar">
-      <div id="stuffInNavbar">
-        <img src="img/sg.png" id="logo">
-        <h2></h2>
-        <h4></h4>
-        <form id="search"  action="javascript:void(0);">
-            <input id="q" name="q" autofocus="true"placeholder="Search SoundCloud">
-            <input type="hidden" name="client_id" value="2010872379d388118fe90f01ace38d03">
-            <input type="hidden" name="order" value="hotness">
-        </form>
+
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="index.html" class="navbar-brand">SoundCloud Instant</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="../about/">About</a>
+            </li>
+            <li>
+              <a href="../contact">Contact</a>
+            </li>
+          </ul>
+          
+          <form class="navbar-form navbar-left" id="search" action="javascript:void(0);">
+                    <input type="text" class="form-control col-lg-8" id="q" name="q" autofocus="true"placeholder="Search SoundCloud">
+                    <input type="hidden" name="client_id" value="2010872379d388118fe90f01ace38d03">
+                    <input type="hidden" name="order" value="hotness">
+          </form>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="http://builtwithbootstrap.com/" target="_blank">Built With Bootstrap</a></li>
+            <li><a href="https://wrapbootstrap.com/?ref=bsw" target="_blank">WrapBootstrap</a></li>
+          </ul>
+
+        </div>
       </div>
     </div>
 
-    <div id="container">
-      <audio id="player"></audio>
-      <div id="sounds"></div>
+    <script type="text/javascript"></script>
+    <div>
+        <h1></h1>
+        <h1></h1>
+    </div>
+    <div>
+        <h1></h1>
+        <h1></h1>
     </div>
 
+        <div id="container">
+            <audio id="player"></audio>
+            <div id="sounds"></div>
+        </div>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="scripts/script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
