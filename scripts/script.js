@@ -7,20 +7,6 @@ $('#search').keyup(function() {
           $('#sounds').empty();
         },
       success:
-        function msToTime(duration) {
-          var milliseconds = parseInt((duration%1000)/100)
-              , seconds = parseInt((duration/1000)%60)
-              , minutes = parseInt((duration/(1000*60))%60)
-              , hours = parseInt((duration/(1000*60*60))%24);
-
-          hours = (hours < 10) ? "0" + hours : hours;
-          minutes = (minutes < 10) ? "0" + minutes : minutes;
-          seconds = (seconds < 10) ? "0" + seconds : seconds;
-          if(hours == "00")
-            return minutes + ":" + seconds;
-          else
-            return hours + ":" + minutes + ":" + seconds;
-        },
         function(data){
           $('#sounds').html('')
           var items = [];
@@ -40,6 +26,21 @@ window.onload = function() {
 };
 
 var clientid = 'client_id=2010872379d388118fe90f01ace38d03';
+
+function msToTime(duration) {
+          var milliseconds = parseInt((duration%1000)/100)
+              , seconds = parseInt((duration/1000)%60)
+              , minutes = parseInt((duration/(1000*60))%60)
+              , hours = parseInt((duration/(1000*60*60))%24);
+
+          hours = (hours < 10) ? "0" + hours : hours;
+          minutes = (minutes < 10) ? "0" + minutes : minutes;
+          seconds = (seconds < 10) ? "0" + seconds : seconds;
+          if(hours == "00")
+            return minutes + ":" + seconds;
+          else
+            return hours + ":" + minutes + ":" + seconds;
+        }
 
 function trackClick(){
   $('#tracks_list a').click(function(){
