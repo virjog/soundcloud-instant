@@ -23,7 +23,7 @@ $('#search').keyup(function() {
 
 });
 window.onload = function() {
-  document.getElementById("q").focus();
+  document.getElementById("sf").focus();
 };
 
 var clientid = 'client_id=2010872379d388118fe90f01ace38d03';
