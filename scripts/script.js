@@ -13,7 +13,7 @@ $('#search').keyup(function() {
           var items = [];
           $.each(data, function(key, val){
             items.push("<div id='tracks_list'><a data-artist='"+val.user.username+"' data-title='"+val.title+ "' data-url=" + val.stream_url + " href='javascript:void();'><li><h2>"+val.title+"</h2>\
-            <span class='plays'>" + val.playback_count+ " plays  -  <b>"+ val.user.username+  "</b></span></li></a>");
+            <span class='plays'>" + val.user.username+ " plays  -  <b>"+ val.user.username+  "</b></span></li></a>");
           });
           $('#sounds').html(items.join(' '));
           trackClick();
