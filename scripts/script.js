@@ -1,3 +1,17 @@
+function msToTime(duration) {
+    var milliseconds = parseInt((duration%1000)/100)
+        , seconds = parseInt((duration/1000)%60)
+        , minutes = parseInt((duration/(1000*60))%60)
+        , hours = parseInt((duration/(1000*60*60))%24);
+
+    hours = (hours < 10) ? "0" + hours : hours;
+    minutes = (minutes < 10) ? "0" + minutes : minutes;
+    seconds = (seconds < 10) ? "0" + seconds : seconds;
+    if(hours == "00")
+      return minutes + ":" + seconds;
+    else
+      return hours + ":" + minutes + ":" + seconds;
+}
 
 $('#search').keyup(function() {
     $.ajax({
@@ -13,7 +27,7 @@ $('#search').keyup(function() {
           var items = [];
           $.each(data, function(key, val){
             items.push("<div id='tracks_list'><a data-artist='"+val.user.username+"' data-title='"+val.title+ "' data-url=" + val.stream_url + " href='javascript:void();'><li><h2>"+val.title+"</h2>\
-            <span class='plays'>" + val.playback_count+ " plays  -  <b>"+ val.user.username+  "</b></span></li></a>");
+            <span class='plays'>" + val.user.username +   " -  <b>" + msToTime(val.duration)  +  "</b></span></li></a>");
           });
           $('#sounds').html(items.join(' '));
           trackClick();
