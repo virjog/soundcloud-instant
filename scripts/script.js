@@ -1,18 +1,3 @@
-function msToTime(duration) {
-    var milliseconds = parseInt((duration%1000)/100)
-        , seconds = parseInt((duration/1000)%60)
-        , minutes = parseInt((duration/(1000*60))%60)
-        , hours = parseInt((duration/(1000*60*60))%24);
-
-    hours = (hours < 10) ? "0" + hours : hours;
-    minutes = (minutes < 10) ? "0" + minutes : minutes;
-    seconds = (seconds < 10) ? "0" + seconds : seconds;
-    if(hours == "00")
-      return minutes + ":" + seconds;
-    else
-      return hours + ":" + minutes + ":" + seconds;
-}
-
 $('#search').keyup(function() {
     $.ajax({
       url: "https://api.soundcloud.com/tracks.json?" + $('#search').serialize(),
@@ -22,6 +7,20 @@ $('#search').keyup(function() {
           $('#sounds').empty();
         },
       success:
+        function msToTime(duration) {
+          var milliseconds = parseInt((duration%1000)/100)
+              , seconds = parseInt((duration/1000)%60)
+              , minutes = parseInt((duration/(1000*60))%60)
+              , hours = parseInt((duration/(1000*60*60))%24);
+
+          hours = (hours < 10) ? "0" + hours : hours;
+          minutes = (minutes < 10) ? "0" + minutes : minutes;
+          seconds = (seconds < 10) ? "0" + seconds : seconds;
+          if(hours == "00")
+            return minutes + ":" + seconds;
+          else
+            return hours + ":" + minutes + ":" + seconds;
+        },
         function(data){
           $('#sounds').html('')
           var items = [];
