@@ -1,18 +1,20 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <title>SoundCloud Instant</title>
     <link rel="stylesheet" href="css/bootstrap.css">
     <!--<link rel="stylesheet" href="style.css">-->
     <link rel="icon" href="img/sc-fav.ico" type="image/x-icon">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=0;" />
-  <!---<link rel="apple-touch-icon-precomposed" sizes="144x144" href="apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-57-precomposed.png">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />-->
+    <script src="scripts/css3-mediaqueries.js"></script>
+    <script>
+      var nua = navigator.userAgent
+      var isAndroid = (nua.indexOf('Mozilla/5.0') > -1 && nua.indexOf('Android ') > -1 && nua.indexOf('AppleWebKit') > -1 && nua.indexOf('Chrome') === -1)
+      if (isAndroid) {
+        $('select.form-control').removeClass('form-control').css('width', '100%')
+      }
+    </script>
   </head>
   <body>
   <script>
@@ -53,8 +55,17 @@
             </li>
           </ul>
 
+           <!--<form class="navbar-form navbar-left" id="search" action="javascript:void(0);">
+              <div class="form-group">
+                <div class="col-md-3">
+                    <input type="text" class="form-control col-lg" id="q" name="q" autofocus="true" placeholder="Search SoundCloud">
+                    <input type="hidden" name="client_id" value="2010872379d388118fe90f01ace38d03">
+                    <input type="hidden" name="order" value="hotness">                </div>
+              </div>
+          </form>-->
+
           <form class="navbar-form navbar-left" id="search" action="javascript:void(0);">
-                    <input type="text" class="form-control col-lg-8" id="q" name="q" autofocus="true"placeholder="Search SoundCloud">
+                    <input type="text" class="form-control col-lg-8" id="q" name="q" autofocus="true" placeholder="Search SoundCloud">
                     <input type="hidden" name="client_id" value="2010872379d388118fe90f01ace38d03">
                     <input type="hidden" name="order" value="hotness">
           </form>
