@@ -73,9 +73,8 @@ body {
 }
 
 #q {
-    
     margin-top: 0px;
-    height: 10px;
+    height: 50px;
     margin-left: 90px;
 }
 
@@ -245,9 +244,10 @@ button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
+  height: auto;
 }
 input {
-  line-height: normal;
+    padding: 0px;
 }
 input[type="checkbox"],
 input[type="radio"] {
@@ -390,7 +390,7 @@ select,
 textarea {
   font-family: inherit;
   font-size: inherit;
-  line-height: inherit;
+  line-height: normal !important;
 }
 a {
   color: #d9230f;
@@ -1756,6 +1756,16 @@ label {
   margin-bottom: 5px;
   font-weight: bold;
 }
+//FireFox workaround, FF ignores line-height for input elements.
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    padding: 18px 6px;
+    height: 0px;
+}
 input[type="search"] {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1799,7 +1809,7 @@ output {
   height: 28px;
   padding: 20px 12px;
   font-size: 17px;
-  line-height: 1.42857143;
+  line-height: normal!important;
   color: #808080;
   background-color: #ffffff;
   background-image: none;
@@ -1843,7 +1853,7 @@ input[type="date"] {
   line-height: 38px;
 }
 .form-group {
-  margin-bottom: 15px;
+     margin-bottom: 15px;
 }
 .radio,
 .checkbox {
@@ -3987,7 +3997,9 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 @media (max-width: 767px) {
   .navbar-form .form-group {
-    margin-bottom: 5px;
+      width: 180px;
+      float: right;
+      margin-right: 150px
   }
 }
 @media (min-width: 768px) {
@@ -5985,4 +5997,8 @@ legend {
 }
 .affix {
   position: fixed;
+}
+@-moz-document url-prefix() { 
+input[type="file"] {
+height: 25px;
 }
