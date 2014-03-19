@@ -5998,7 +5998,7 @@ legend {
 .affix {
   position: fixed;
 }
-@-moz-document url-prefix() { 
+@-moz-document url-prefix() {
 input[type="file"] {
 height: 25px;
 }
