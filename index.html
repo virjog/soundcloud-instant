@@ -1,76 +1,95 @@
-<!doctype html>
-<html>
-  <head>
-    <title>SoundCloud Instant</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+
+    <title>SoundCloud Instant - Viral Jogani</title>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="img/sc-fav.ico" />
+
+    <!-- style -->
     <link rel="stylesheet" href="css/bootstrap_a.css">
-    <link rel="icon" href="sc-fav.ico" type="image/x-icon">
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; minimum-scale=1.0; user-scalable=0;" />
-  </head>
-  <body>
-  <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=418183624970445";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
+</head>
 
-    <div class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <a href="http://soundcloud-instant.herokuapp.com/" class="navbar-brand">SoundCloud Instant</a>
-        </div>
-        <div class="navbar-collapse collapse" id="navbar-main">
-          <ul class="nav navbar-nav">
-            <li>
-              <a href="#"></a>
-            </li>
-            <li>
-              <a href="#"></a>
-            </li>
-          </ul>
+<body class="hasLeftCol home composerExpanded fbx hasSmurfbar hasPrivacyLite webkit chrome win Locale_en_US" screen_capture_injected="true">
 
-          <form class="navbar-form navbar-left" id="search" action="javascript:void(0);">
-                    <input type="text" class="form-control col-lg-8" id="q" name="q" autofocus="true"placeholder="Instantly search SoundCloud">
-                    <input type="hidden" name="client_id" value="2010872379d388118fe90f01ace38d03">
-                    <input type="hidden" name="order" value="hotness">
-          </form>
 
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="https://twitter.com/virjog" target="_blank">Made by Viral Jogani</a></li>
-           <!--<li>
-               <div class="custom-tweet-button">
-                  <a href="https://twitter.com/share" target="_blank" alt ="Tweet this post">
-                    <i class="btn-icon"></i>
-                    <span class="btn-text">Tweet</span>
-                  </a>
+    <!--ORANGE BAR - FB STYLE -->
+    <div id="pagelet_orangebar" data-reference="pagelet_orangebar">
+        <div id="orangeBarHolder" class="slim">
+            <div id="orangeBar" class="fixed_elem">
+                <div id="pageHead" class="clearfix _5bfg" role="banner">
+                    <div class="clearFix" id="headNav">
+                        <div class="_585-" role="search" id="js_1">
+                            <div class="uiTypehead _5860" data-fit="{'tn':'+Q'}" id="u_0_9">
+                                <div class="wrap" id="abId0.7003575700800866">
+                                    <div class="InnerWrap" id="abId0.5270405129995197">
+                                        <!--<div class="_5861 textInput _586g _586p focus_target child_was_focused" style="font-size: 14px;">-->
+                                            <form class="navbar-form navbar-left" id="search" action="javascript:void(0);">
+                                                <input type="text" class="form-control col-lg-8" id="q" name="q" autofocus="true" placeholder="Search for songs, artists, and albums on SoundCloud">
+                                                <input type="hidden" name="client_id" value="2010872379d388118fe90f01ace38d03">
+                                                <input type="hidden" name="order" value="hotness">
+                                            </form>
+
+                                                <!--<input type="text" class="form-control col-lg-8" id="q" name="q" autofocus="true" placeholder="Search for songs, artists, and albums on SoundCloud">
+                                                <input type="hidden" name="client_id" value="2010872379d388118fe90f01ace38d03">
+                                                <input type="hidden" name="order" value="hotness">-->
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <ul id="credit">
+                            <li><a href="https://twitter.com/virjog" target="_blank">Made by Viral Jogani</a></li>
+                        </ul>
+                    </div>
                 </div>
-            </li>
-            <li>
-                <div class="fb-share-button" data-href="http://soundcloud-instant.herokuapp.com/" data-type="button_count"></div>
-            </li>-->
-          </ul>
-
+            </div>
         </div>
-      </div>
     </div>
 
     <script type="text/javascript"></script>
-    <div>
-        <h1></h1>
-        <h1></h1>
-    </div>
-    <div>
-        <h1></h1>
-        <h1></h1>
-    </div>
-
         <div id="container">
             <audio id="player"></audio>
             <div id="sounds"></div>
         </div>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="scripts/script.js"></script>
-  </body>
+</body>
+    <!--<div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a href="http://soundcloud-instant.herokuapp.com/" class="navbar-brand">SoundCloud Instant</a>
+            </div>
+
+            <div class="navbar-collapse collapse" id="navbar-main">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+
+                <form class="navbar-form navbar-left" id="search" action="javascript:void(0);">
+                    <input type="text" class="form-control col-lg-8" id="q" name="q" autofocus="true"placeholder="Search SoundCloud">
+                    <input type="hidden" name="client_id" value="2010872379d388118fe90f01ace38d03">
+                    <input type="hidden" name="order" value="hotness">
+                </form>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="https://twitter.com/virjog" target="_blank">Made by Viral Jogani</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>-->
+
+    <!-- scripts -->
+
 </html>
