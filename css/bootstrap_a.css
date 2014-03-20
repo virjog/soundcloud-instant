@@ -32,11 +32,16 @@ text-align: left;
 direction: ltr;
 unicode-bidi: embed;
 }
-user agent stylesheetbody {
-display: block;
-margin: 8px;
+body {
+  display: block;
+  margin: 0px;
 }
 /*Orange Bar - FB Style */
+#credit {
+  margin-left: 790px;
+  margin-top: -13px;
+  list-style: none;
+}
 #orangeBar {
 background-color: #ff7700;
 height: 41px;
@@ -287,10 +292,10 @@ display: block;
 
 /*Sound Player*/
 
-#sf {
-    margin-top: 10px;
-    margin-left: 90px;
-    height: 50px;
+#q {
+    margin-top: 5px;
+    margin-left: -15px;
+    width: 550px;
 }
 
 /* Songs list */
@@ -578,13 +583,15 @@ input, button, select, textarea {
   line-height: normal !important;
 }
 a {
-  color: #d9230f;
+  color: #FFFAFA;
   text-decoration: none;
+  font-weight: bold;
 }
 a:hover,
 a:focus {
-  color: #91170a;
-  text-decoration: underline;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
 }
 a:focus {
   outline: thin dotted;
@@ -655,7 +662,7 @@ h6,
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 300;
   line-height: 1.1;
-  color: #333333;
+  color: #ffffff;
 }
 h1 small,
 h2 small,
@@ -683,7 +690,7 @@ h6 .small,
 .h6 .small {
   font-weight: normal;
   line-height: 1;
-  color: #808080;
+  color: #ffffff;
 }
 h1,
 .h1,
@@ -1611,7 +1618,7 @@ input[type="checkbox"]:focus {
   outline-offset: -2px;
 }
 /*Search SoundCloud Form*/
-/*.form-control {
+.form-control {
   display: block;
   width: 100%;
   height: 28px;
@@ -1621,32 +1628,15 @@ input[type="checkbox"]:focus {
   color: #808080;
   background-color: #ffffff;
   background-image: none;
-  border: 1px solid #dddddd;
+  border: none;
   border-radius: 0px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-}*/
-.form-control {
-  display: block;
-  width: 100%;
-  height: 35px;
-  padding: 0px 12px;
-  font-size: 17px;
-  line-height: normal!important;
-  color: #808080;
-  background-color: #ffffff;
-  background-image: none;
-  border: 1px solid #dddddd;
-  border-radius: 4px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-  }
+}
 .form-control:focus {
-  border-color: #ff650d;
+  border-color: none;
   outline: 0;
   -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
@@ -3775,17 +3765,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
 }
 .navbar-form {
-margin-left: 15px;
-margin-right: 15px;
-padding: 10px 10px;
-border-top: 1px solid transparent;
-border-bottom: 1px solid transparent;
--webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-margin-top: 3px;
-margin-bottom: 3px;
-}
-/*.navbar-form {
   margin-left: 15px;
   margin-right: 15px;
   padding: 10px 10px;
@@ -3795,7 +3774,7 @@ margin-bottom: 3px;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   margin-top: 3px;
   margin-bottom: 3px;
-}*/
+}
 @media (min-width: 768px) {
   .navbar-form .form-group {
     display: inline-block;
