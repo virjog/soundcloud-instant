@@ -53,7 +53,7 @@ function trackClick(){
   audioPlayer.src = url;
   audioPlayer.load();
   document.getElementById('player').play();
-  document.title="Playing - SoundCloud Instant"
+  document.title="Playing" + title;
     return false;
   });
 }
